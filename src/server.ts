@@ -1,6 +1,5 @@
 import express from "express";
 import { sequelize } from "./database";
-import { adminJs, adminJsRouter } from "./adminjs";
 import { router } from "./routes";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -17,7 +16,7 @@ app.use(cors({
 
 
 /* routes */
-app.use(adminJs.options.rootPath, adminJsRouter);
+
 app.use(router);
 
 app.get("/", (req, res) => {
