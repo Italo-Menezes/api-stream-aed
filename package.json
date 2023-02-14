@@ -4,8 +4,7 @@
   "description": "Api de ead",
   "main": "src/serve.ts",
   "scripts": {
-    "start": "node build/server.js",
-    "build": "tsc"
+    "start": "node build/server.js"
   },
   "pre-commit": [
     "ts.check",
