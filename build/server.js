@@ -9,13 +9,13 @@ const adminjs_1 = require("./adminjs");
 const routes_1 = require("./routes");
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 /* confg */
 const port = process.env.PORT || 3000;
 const app = (0, express_1.default)();
 app.use(express_1.default.static("public"));
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({}));
-dotenv_1.default.config();
 /* routes */
 app.use(adminjs_1.adminJs.options.rootPath, adminjs_1.adminJsRouter);
 app.use(routes_1.router);

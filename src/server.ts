@@ -4,6 +4,7 @@ import { adminJs, adminJsRouter } from "./adminjs";
 import { router } from "./routes";
 import cors from "cors";
 import dotenv from "dotenv";
+dotenv.config();
 
 /* confg */
 const port = process.env.PORT || 3000;  
@@ -13,7 +14,6 @@ app.use(express.json())
 app.use(cors({
   
 }))
-dotenv.config();
 
 
 /* routes */
